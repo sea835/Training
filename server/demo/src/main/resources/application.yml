@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: demo
+  data:
+    mongodb:
+      uri: mongodb+srv://ngohai835:Haihaihai1!@cluster0.zbuxtja.mongodb.net/food_delivery_db?retryWrites=true&w=majority&appName=Cluster0
+server:
+  port: 5555
