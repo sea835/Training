@@ -1,6 +1,6 @@
 const SideBar = () => {
     return (
-        <div className="flex flex-col w-[100px] h-full rounded-[16px] bg-[#1F1D2B] text-[#EA7C69] items-center py-6">
+        <div className="flex flex-col w-[100px] h-full rounded-e-2xl-[16px] bg-[#1F1D2B] text-[#EA7C69] items-center py-6">
             <img src="/Logo.png" alt="Logo" className="hover:bg-[#2D303E] hover:rounded-xl p-4" />
             <ul className="flex flex-col items-center mt-16 h-3/4">
                 <li className="mb-6 flex justify-center hover:bg-[#2D303E] hover:rounded-xl p-4">
