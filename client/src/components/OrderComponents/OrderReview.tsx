@@ -1,9 +1,34 @@
 import { OrderList } from "./OrderList";
+import { useState, useEffect } from "react";
 
-export const OrderReview = () => {  
+interface OrderReviewProps {
+    visible: boolean;
+}
+
+export const OrderReview = ({visible}: OrderReviewProps) => {  
+    const [isVisible, setIsVisible] = useState(false);
+    
+    useEffect(() => {
+        setIsVisible(visible);
+    }, [visible]);
+    
+    
+    // If not visible, don't render
+    if (!isVisible) {
+        return null;
+    }
+    
     return (
         <div className="bg-[#1F1D2B] w-1/3 h-full flex flex-col rounded-s-2xl">
-            <p className="text-white font-bold text-3xl pl-4 pt-8">Orders #34562</p>    
+            <div className="flex justify-between items-center">
+                <p className="text-white font-bold text-3xl pl-4 pt-8">Orders #34562</p>
+                <button 
+                    className="text-white mr-4 pt-8"
+                    onClick={() => setIsVisible(false)}
+                >
+                    ✕
+                </button>
+            </div>
             <div className="flex justify-center items-center mt-16">
                 <OrderList />
             </div>
